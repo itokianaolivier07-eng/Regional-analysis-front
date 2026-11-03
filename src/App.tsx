@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API = import.meta.env.VITE_API_URL ?? "/api";
+const API = import.meta.env.VITE_API_URL || "/api";
 
 type Periode = { debut: string; fin: string };
 
