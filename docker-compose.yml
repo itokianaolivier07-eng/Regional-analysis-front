@@ -2,10 +2,12 @@ services:
   frontend:
     build: .
     ports:
-      - "8080:80"
+      - "${FRONT_PORT:-8080}:80"
     environment:
       API_URL: ${API_URL:-http://host.docker.internal}
       API_KEY: ${API_KEY}
+    volumes:
+      - ./.htpasswd:/etc/nginx/.htpasswd:ro
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped

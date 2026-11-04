@@ -25,3 +25,5 @@ dist-ssr
 
 # Variables locales (ne jamais commiter)
 .env
+.htpasswd
+.htpasswd
